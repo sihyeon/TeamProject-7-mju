@@ -1,7 +1,6 @@
 package Frame;
 import constants.PFConstants;
 import constants.Perfume_Info.*;
-import PFDataStruct.PFInsert;
 import javax.swing.JFrame;
 
 public class PFMainFrame extends JFrame {
@@ -10,7 +9,7 @@ public class PFMainFrame extends JFrame {
 	private PFMainPanel mainPanel;
 	
 	private PFMainFrame(String title){
-		super(title);
+		super(title); 
 
 	}
 	public static PFMainFrame getUniqueMainFrame() {
@@ -19,11 +18,10 @@ public class PFMainFrame extends JFrame {
 	
 	public void init(){
 		
-		this.setSize(PFConstants.WIDTH_MAINFRAME, PFConstants.HEIGHT_MAINFRAME);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setVisible(true);
+		this.setSize(PFConstants.WIDTH_MAINFRAME, PFConstants.HEIGHT_MAINFRAME);	//프레임 크기 설정
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//종료시 콘솔도 종료
+		this.setVisible(true);	
 		mainPanel = new PFMainPanel();
-		add(mainPanel);
+		add(mainPanel);	//프레임에 메인패널 추가
 	}
-
 }
