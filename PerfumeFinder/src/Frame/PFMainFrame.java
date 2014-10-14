@@ -1,8 +1,11 @@
 package Frame;
+
 import constants.PFConstants;
 import constants.Perfume_Info.*;
 import javax.swing.JFrame;
 import javax.swing.BoxLayout;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 public class PFMainFrame extends JFrame {
 	private static PFMainFrame uniqueMainFrame = new PFMainFrame(PFConstants.TITLE_MAINFRAME);
@@ -18,6 +21,7 @@ public class PFMainFrame extends JFrame {
 	}
 	
 	public void init(){
+		this.setIconImage(new ImageIcon(PFConstants.IMG_URL+"search.png").getImage());
 		mainPanel = new PFMainPanel();
 		add("Center",mainPanel);	//프레임에 메인패널 추가
 		this.setSize(PFConstants.WIDTH_MAINFRAME, PFConstants.HEIGHT_MAINFRAME);	//프레임 크기 설정
