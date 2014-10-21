@@ -9,6 +9,7 @@ public class Perfume_info_patten {  //향수 정보를 위한 부모클래스
 	private  String Perfume_image;					//이미지파일명
 	private String Perfume_Brand;					//브랜드 이름
 	private String User_Sex;							//사용자 성별
+	public int Priority; 									//우선순위설정
 	Perfume_info_patten(String Tname, int Tprice, String Tscent[],  String Tbrand, String Timage, String Tsex){		//생성자
 		this.Perfume_Name = Tname;
 		this.Perfume_Price = Tprice;
@@ -17,6 +18,7 @@ public class Perfume_info_patten {  //향수 정보를 위한 부모클래스
 		}
 		this.Perfume_Brand = Tbrand;
 		this.User_Sex = Tsex;
+		this.Priority = 0;
 	}
 	public String[] getPerfume_Scent() {
 		return Perfume_scent;

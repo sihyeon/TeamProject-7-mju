@@ -17,8 +17,9 @@ public class PFCheckBoxPanel extends JPanel {
 			JCheckBox check = new JCheckBox(checkbox.toString());
 			this.add(check);
 		}
-		this.setBorder(BorderFactory.createTitledBorder("향기를 선택해주십시오"));		//체크박스 패널 이름
+		//this.setBorder(BorderFactory.createTitledBorder("향기를 선택해주십시오"));		//체크박스 패널 이름
 	}
+	
 	public class checkboxEventHandler implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
