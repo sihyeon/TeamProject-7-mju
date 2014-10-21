@@ -2,7 +2,7 @@ package constants.Perfume_Info;
 
 public class Info_write {
 	
-	public Perfume_info_patten PerfumeList[];
+	private Perfume_info_patten PerfumeList[];
 	
 	public void info(){ //향수 정보
 	PerfumeList = new Perfume_info_patten[Perfume_info_patten.Perfume_Kind]; 
@@ -19,6 +19,11 @@ public class Info_write {
 	PerfumeList[3] = new Perfume_info_patten("나르시소 포 힘 오드퍼퓸", 100000, new String[]{"아이리스", "핑크베리"/**/, 
 			"엠버 그리스"/**/,"파촐리"},  "나르시소 로드리게즈", "나르시소 포 힘 오드퍼퓸.jpg", "남");
 		}
-	
+	public Perfume_info_patten[] getPerfumeList() {
+		return PerfumeList;
+	}
+	public void setPerfumeList(Perfume_info_patten[] perfumeList) {
+		PerfumeList = perfumeList;
+	}
 }
 
