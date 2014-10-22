@@ -27,6 +27,6 @@ public class PFMainPanel extends JPanel {
 		checkbox.setPreferredSize(new Dimension(500,300));
 		add(checkbox);	//체크박스 추가
 		
-		add(searchbutton);	//검색버튼 추가
+		add(searchbutton.getBtn());	//검색버튼 추가
 	}
 }

@@ -36,4 +36,8 @@ public class PFCheckBoxPanel extends JPanel {
 			}
 		}
 	}
+	public EventHandler geteHandler() {
+		return eHandler;
+	}
+	
 }

@@ -1,26 +1,34 @@
 package Frame;
 
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.ImageIcon;
 
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import constants.PFConstants;
 
 public class PFSearchButton extends JButton {
+	private EventHandler eHandler;
+	private JButton btn;
 
 	public PFSearchButton(){
-		super(new ImageIcon(PFConstants.IMG_URL+"search.png"));
+		btn = new JButton(new ImageIcon(PFConstants.IMG_URL+"search.png"));
+		add(btn);
+		eHandler = new EventHandler();
+		btn.addActionListener(eHandler);
 	}
 	private class EventHandler implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			JCheckBox  check = (JCheckBox)e.getSource();
-			System.out.println(check.getText());		// 체크박스 부분에 이벤트 핸들러로 체크하면 겟소스 되게끔 하기.
+			JButton bt = (JButton)e.getSource();
+			System.out.println("검색버튼 눌렀음");
 	//		checkbox = new PFCheckBoxPanel();
 		}
 	}
+	
+	public JButton getBtn() {
+		return btn;
+	}
+	
 }
