@@ -13,9 +13,7 @@ public class Perfume_info_patten {  //향수 정보를 위한 부모클래스
 	Perfume_info_patten(String Tname, int Tprice, String Tscent[],  String Tbrand, String Timage, String Tsex){		//생성자
 		this.Perfume_Name = Tname;
 		this.Perfume_Price = Tprice;
-		for(int i = 0; i <= 10; i++){
-			this.Perfume_scent[i] = Tscent[i];
-		}
+		this.Perfume_scent = Tscent;
 		this.Perfume_Brand = Tbrand;
 		this.User_Sex = Tsex;
 		this.Priority = 0;

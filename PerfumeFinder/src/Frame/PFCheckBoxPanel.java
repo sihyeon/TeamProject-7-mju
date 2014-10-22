@@ -15,7 +15,6 @@ public class PFCheckBoxPanel extends JPanel {
 	private EventHandler eHandler;
 //	private JCheckBox check[];
 	private static List<JCheckBox> check = new ArrayList<JCheckBox>();
-	private static List<String> oPerlishArray = new ArrayList<String>();
 	public PFCheckBoxPanel(){
 		int i = 0;
 		for(PFConstants.PFCheckBox checkbox : PFConstants.PFCheckBox.values()){	//체크박스 추가
@@ -39,8 +38,4 @@ public class PFCheckBoxPanel extends JPanel {
 	public static List<JCheckBox> getCheck() {
 		return check;
 	}
-	public List<String> getoPerlishArray() {
-		return oPerlishArray;
-	}
-
 }
