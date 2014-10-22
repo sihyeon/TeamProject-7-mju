@@ -25,10 +25,10 @@ public class PFSearchButton extends JButton {
 	private class EventHandler implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			checkbox.test();
-	//		 for (int i = 0; i < checkbox.getoPerlishArray().size(); i++){
-	//		      System.out.println(checkbox.getoPerlishArray().get(i));
-	//		 }
+			 for (int i = 0; i < checkbox.getCheck().size(); i++){
+				 if (checkbox.getCheck().get(i).isSelected())
+			      System.out.println(checkbox.getCheck().get(i).getText());
+			 }
 			System.out.println("검색버튼 눌렀음");
 		}
 	}

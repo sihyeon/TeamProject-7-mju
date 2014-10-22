@@ -13,14 +13,16 @@ import constants.PFConstants;
 
 public class PFCheckBoxPanel extends JPanel {
 	private EventHandler eHandler;
-	private JCheckBox check;
+//	private JCheckBox check[];
+	private static List<JCheckBox> check = new ArrayList<JCheckBox>();
 	private static List<String> oPerlishArray = new ArrayList<String>();
 	public PFCheckBoxPanel(){
+		int i = 0;
 		for(PFConstants.PFCheckBox checkbox : PFConstants.PFCheckBox.values()){	//Ã¼Å©¹Ú½º Ãß°¡
-			check = new JCheckBox(checkbox.toString());
-			this.add(check);
+			PFCheckBoxPanel.check.add(new JCheckBox(checkbox.toString()));
+			this.add(check.get(check.size()-1));
 			eHandler = new EventHandler();
-			check.addActionListener(eHandler);
+			check.get(check.size()-1).addActionListener(eHandler);
 		}
 	}
 	private class EventHandler implements ActionListener{
@@ -28,22 +30,17 @@ public class PFCheckBoxPanel extends JPanel {
 		public void actionPerformed(ActionEvent e) {
 			JCheckBox  check = (JCheckBox)e.getSource();
 			if (check.isSelected()){			
-				System.out.println(check.getText());
-				PFCheckBoxPanel.oPerlishArray.add(check.getText());
-				
+				System.out.println(check.getText());		
 			}
 		}
 	}
+	
 
+	public static List<JCheckBox> getCheck() {
+		return check;
+	}
 	public List<String> getoPerlishArray() {
 		return oPerlishArray;
 	}
 
-	public void test(){
-		System.out.println("Å©ÇïÇï"+check.getText());
-		if (check.isSelected()){
-			System.out.println("Å©ÇïÇï"+check.getText());
-		}
-	}
-	
 }
