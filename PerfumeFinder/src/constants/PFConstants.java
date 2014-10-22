@@ -7,5 +7,5 @@ public class PFConstants {
 	
 	public static final String IMG_URL = "image/"; //이미지 위치
 	
-	public static enum PFCheckBox{로즈마리,머스크,베르가못,피치,라일락,라임,레몬,오렌지,우드,허니,쟈스민,프리지아,아이비,파츌리,엠버,복숭아,코튼,자몽,비누향} //체크박스 목록
+	public static enum PFCheckBox{로즈마리,머스크,베르가못,피치,라일락,라임,레몬,오렌지,우드,허니,쟈스민,프리지아,아이비,파츌리,엠버,복숭아,코튼,자몽,비누향,졸리다} //체크박스 목록
 }
